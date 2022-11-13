@@ -36,7 +36,7 @@ def part1(data: list[list[int]]) -> int:
     return total(gamma, data) * total(lambda d,c: not gamma(d, c), data)
 
 def part2(data: list[list[int]]) -> int:
-    return rating(lambda o,z: o >= z, data) * rating(lambda o,z: z > o, data)
+    return rating(lambda o, z: o >= z, data) * rating(lambda o, z: z > o, data)
 
 data = utils.get_input("d3")
 pdata = list(map(lambda l: list(map(int, l)), data.splitlines()))
